@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct array
+{
+    int A[10];
+    int size;
+    int length;
+};
+
+void linearSearch(struct array arr, int key)
+{
+    int i;
+    for ( i =0; i < arr.length; i++)
+    {
+        if (arr.A[i]==key)
+        //return i;
+        printf("\n%d ",i);  
+    }   
+}
+
+int main()
+{
+    struct array arr={{9,8,7,6,5},10,5};
+    linearSearch(arr,9);
+    linearSearch(arr,8);
+    linearSearch(arr,7);
+    linearSearch(arr,6);
+    linearSearch(arr,5);
+
+    return 0;
+}
